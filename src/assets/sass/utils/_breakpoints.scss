@@ -1,0 +1,78 @@
+// breakpoints
+$xsmall: 376px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+
+@mixin mq($size, $screen) {
+    @if $screen==xs {
+        @if $size==max {
+            @media only screen and (#{$size}-width: $xsmall - 1) {
+                @content;
+            }
+        }
+
+        @else {
+            @media only screen and (#{$size}-width: $xsmall) {
+                @content;
+            }
+        }
+    }
+
+    @else if $screen==sm {
+        @if $size==max {
+            @media only screen and (#{$size}-width: $small - 1) {
+                @content;
+            }
+        }
+
+        @else {
+            @media only screen and (#{$size}-width: $small) {
+                @content;
+            }
+        }
+    }
+
+    @else if $screen==md {
+        @if $size==max {
+            @media only screen and (#{$size}-width: $medium - 1) {
+                @content;
+            }
+        }
+
+        @else {
+            @media only screen and (#{$size}-width: $medium) {
+                @content;
+            }
+        }
+    }
+
+    @else if $screen==lg {
+        @if $size==max {
+            @media only screen and (#{$size}-width: $large - 1) {
+                @content;
+            }
+        }
+
+        @else {
+            @media only screen and (#{$size}-width: $large) {
+                @content;
+            }
+        }
+    }
+
+    @else if $screen==xl {
+        @if $size==max {
+            @media only screen and (#{$size}-width: $xlarge - 1) {
+                @content;
+            }
+        }
+
+        @else {
+            @media only screen and (#{$size}-width: $xlarge) {
+                @content;
+            }
+        }
+    }
+}

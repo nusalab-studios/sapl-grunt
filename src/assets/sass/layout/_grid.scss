@@ -1,0 +1,66 @@
+@for $i from 1 through 12 {
+    .sapl-col-#{$i},
+    .sapl-col-xs-#{$i},
+    .sapl-col-sm-#{$i},
+    .sapl-col-md-#{$i},
+    .sapl-col-lg-#{$i},
+    .sapl-col-xl-#{$i} {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@for $i from 1 through 12 {
+    .sapl-col-#{$i} {
+        flex: 0 0 calc(100% / 12 * $i);
+        max-width: 100% / 12 * $i;
+    }
+}
+
+@include mq(min, xs) {
+    @for $i from 1 through 12 {
+        .sapl-col-xs-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@include mq(min, sm) {
+    @for $i from 1 through 12 {
+        .sapl-col-sm-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@include mq(min, md) {
+    @for $i from 1 through 12 {
+        .sapl-col-md-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@include mq(min, lg) {
+    @for $i from 1 through 12 {
+        .sapl-col-lg-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@include mq(min, xl) {
+    @for $i from 1 through 12 {
+        .sapl-col-xl-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
